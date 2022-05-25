@@ -1,0 +1,39 @@
+<html>
+<body>
+	<script type="text/javascript">
+		const arr = [{date:"16-5-2022",login:"09:00",logout:"19:00"},
+		{date:"17-5-2022",login:"08:00",logout:"17:00"},
+		{date:"18-5-2022",login:"09:00",logout:"18:00"},
+		{date:"23-5-2022",login:"06:00",logout:"15:00"}];
+	
+  	var z = arr.length-1;
+  	console.log("Fully Rested");
+  	for(let i=0;i<z;i++)
+  	{
+  		var previousdate = (arr[i].date);
+  		var currentdate = (arr[i+1].date);
+	//console.log(previousdate);
+	//console.log(currentdate);
+	//console.log("value of i", i, arr[i]);
+	var initial1 = previousdate.split(/-/);
+	var previousdate =  [ initial1[1], initial1[0], initial1[2] ].join('/'); 
+    var initial2 = currentdate.split(/-/);
+	var currentdate =  [ initial2[1], initial2[0], initial2[2] ].join('/'); 
+ 	let pd =new Date(previousdate+' '+(arr[i].logout));
+	let cd =new Date(currentdate +' '+(arr[i+1].login));
+	//console.log(pd);
+	//console.log(cd);
+	let diff = (cd-pd);
+
+	//console.log("Diff :- ",Math.abs(diff)); 
+	 var seconds = Math.floor((diff / 1000) % 60),
+    minutes = Math.floor((diff / (1000 * 60)) % 60),
+    hours = Math.floor((diff / (1000 * 60 * 60)) % 24),
+    days = Math.floor(diff / (1000 * 60*60)/24);
+    
+  	console.log(arr[i] , " days => " + days + "   hours => " + hours + "   minutes => " + minutes);
+  	 }
+    
+</script>
+</body>
+</html>
