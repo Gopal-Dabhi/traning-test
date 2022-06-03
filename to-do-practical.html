@@ -1,0 +1,143 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		form{
+			 padding: 10px;
+       max-width: 100svw;
+     }
+		body{
+
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid black;
+    margin: 100px 450px;
+    max-width: 100vw;
+    padding: 10px;
+
+		}
+		#input-field{
+			width: 20vw;
+		}
+		p{
+			text-align: left;
+			margin-block-end: 0;
+
+			
+		}
+			
+		#input-field{
+			padding: 10px;
+    	border-color: gray;
+    	opacity: 0.8;
+		}
+		h1{
+			margin-block-start: 0;
+		}
+		h3{
+			text-align: left;
+			border-bottom: 1px solid black;
+		}
+		.btn{
+			text-decoration: none;
+			border: none;
+			background: none;
+			opacity: 0.5;
+			text-align: right;
+		}
+		.btn:hover{
+			opacity: 1;
+		}	
+		.xyz{
+			justify-content: space-between;
+		}
+
+
+	</style>
+	<script>
+		var data = new Array();
+		
+		function add()
+		{
+			data.push(document.getElementById('input-field').value);	
+			document.getElementById('input-field').value='';
+			disp();			
+			}
+			function disp(){
+			var str='';
+			for (let i=0;i<data.length;i++) 
+				{
+					
+          Buttonitem="<button class='btn' id='editbtn'onClick='edit_element("+data.indexOf(data[i])+")'> Edit</button> <button class='btn' onClick='remove_element("+data.indexOf(data[i])+")'> Delete</button> ";
+					str +=  data[i] + Buttonitem + "<br>";  
+				} 
+				document.getElementById('display_list').innerHTML=str;
+				/*const edi =document.getElementById('edibtn');
+			const inp = document.getElementById('inpt');
+			inp.setAttribute("readonly","readonly");
+			edi.addEventListener('click',() => {
+				if (edi.innerHTML.toLowerCase()=="edit")
+				{
+					inp.removeAttribute("readonly");
+					inp.focus();
+					edi.innerText = "Save";
+				}else{
+					inp.setAttribute("readonly", "readonly");
+					edi.innerText = "Edit";
+				}
+			}); */
+			}
+			
+			function remove_element(index_no){
+			data.splice(index_no,1);
+			disp();
+			}
+			function edit_element(index_no) {
+				for(let y=0;y<data.length;y++){
+			 	if(y==index_no)
+			 	{
+			 			temp = "<input type='text' id='inpt' value='"+data[index_no]+"'>";
+	    			data[index_no]=temp;
+	    			
+	    			disp();
+	    		}
+
+			 }
+			}
+			
+			
+			
+	</script>
+</head>
+<body>
+	<form id="form"> 
+	<h1 style="color:black;" align="center"> TODO LIST </h1> 
+<h3 align="left">ADD ITEM</h3>
+<input type="text" id="input-field" placeholder="Enter Text">
+<input type="button" value="Add" onclick='add()' class="btn">
+<h3>TO DO</h3>
+
+<span id="display_list"></span>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
