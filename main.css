@@ -1,0 +1,36 @@
+body{
+     box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: monospace, 'Courier New', Courier;
+    text-align: -webkit-center;
+    }
+main{
+    width: 350px;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+form{
+    align-content: center;
+}
+.listitem{
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
