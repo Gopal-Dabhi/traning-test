@@ -58,15 +58,3 @@ function removeItem(e) {
 	}
 }
 
-
-function toInput() {
-    var inner = document.querySelector('.listItem div');
-    console.log(inner);
-    $('.listItem div').replaceWith('<input value="' + inner.innerHTML + '">' );
-}
-
-function saveInput() {
-    var inputVal = $('.listItem input').val();
-    console.log(inputVal);
-    $('.listItem input').replaceWith('<div>' + inputVal + '</div>' );
-}
