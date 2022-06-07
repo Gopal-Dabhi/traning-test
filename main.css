@@ -1,10 +1,42 @@
 body{
-     box-sizing: border-box;
+    box-sizing: border-box;
     text-transform: uppercase;
-    font-family: monospace, 'Courier New', Courier;
-    text-align: -webkit-center;
+    font-family: monospace;
+    text-align: center;
+    border: 1px solid black;
+    max-width: 350px;
+    
     }
-main{
+    #box{
+    padding: 10px;
+    
+}
+.main-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: monospace;
+    
+}
+.content-title{
+    text-transform: uppercase;
+    font-family: monospace;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+#items{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+
+}
+section{
+    display: inline;
+}
+
+
+
+
+/*main{
     width: 350px;
     text-align: center;
     border: 1px solid black;
@@ -35,7 +67,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgrey;
-}
+}*/
 
 
 

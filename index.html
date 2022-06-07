@@ -1,47 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="main.js"></script>
-	<title>To Do List</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <link href="main.css" rel="stylesheet">
+    <script src="main.js"></script>
 </head>
-
 <body>
-	<main>
-	<h2>Add Items</h2>
-		<form id="addForm">
-			<div>
-					<input type="text" id="item">
-			
-				<button type="submit" id="submit" value="Submit">Submit	 </button>
-				</div>
-			<h3>TODO</h3>	
-				<div class="listitem">
-		<ul id="items"></ul>
-	</div>
-		</form>
-</main>
+    <div class="container main">
+    <h1 class="main-title">todo list</h1>
+    <header class="main-input">
+        <h3 class="content-title">add item</h3>
+        <form id="task-form" class="input-form">
+        <input type="text" class="form-control"
+        placeholder="ENTER TEXT" id="box"/>
+        <input type="submit" id="task-submit" value="Add">
+        </form>
+    </header>
+
+    <main>
+        <section class="task-list">
+            <h3 class="content-title">TODO</h3>
+            <div id="tasks">
+
+            </div>
+        </section>
+    </main>
+
+</div>
 </body>
-
-</html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</html>
 
 
