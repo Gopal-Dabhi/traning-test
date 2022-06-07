@@ -9,6 +9,7 @@ window.onload = () => {
 	form1.addEventListener("submit", addItem);
 	items.addEventListener("click", removeItem);
 };
+
 function addItem(e) {
 	e.preventDefault();
 
@@ -57,4 +58,5 @@ function removeItem(e) {
 		editItem = e;
 	}
 }
+
 
