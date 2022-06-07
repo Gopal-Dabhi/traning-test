@@ -53,10 +53,15 @@ function removeItem(e) {
 		
 	}
 	if (e.target.classList.contains("edit")) {
-		document.getElementById("item").value = e.target.parentNode.childNodes[0].data;
-		submit.value = "SAVE";
-		editItem = e;
+		// document.getElementById("item").value = e.target.parentNode.childNodes[0].data;
+		// submit.value = "SAVE";
+		// editItem = e;
+	 
+    (e.target.parentNode).setAttribute("contenteditable", "true");
+   	
+
 	}
 }
+
 
 
